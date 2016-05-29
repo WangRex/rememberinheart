@@ -4,8 +4,8 @@
 
 	<groupId>rememberinheart</groupId>
 	<artifactId>rmbih</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<version>1.0</version>
+	<packaging>war</packaging>
 
 	<name>rmbih</name>
 	<url>http://maven.apache.org</url>
