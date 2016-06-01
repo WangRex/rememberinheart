@@ -57,7 +57,6 @@
 
 	<script id="picList" type="text/html">
     	{{each list as value i}}
-{{value}}
 			<li>
 				<a href="javascript:void(0);" target="_blank"><img src="{{value.picUrl}}" alt="" /></a>
 				<div class="sb-description">
