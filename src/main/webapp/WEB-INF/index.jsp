@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>  
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="../css/slicebox.css" />
 <link rel="stylesheet" type="text/css" href="../css/custom.css" />
 <script type="text/javascript" src="../js/modernizr.custom.46884.js"></script>
+<script type="text/javascript" src="../js/template.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -26,34 +27,6 @@
 		<div class="wrapper">
 
 			<ul id="sb-slider" class="sb-slider">
-				<li><a href="javascript:void(0);" target="_blank"><img src="images/1.jpg" alt="image1" /></a>
-					<div class="sb-description">
-						<h3>Creative Lifesaver</h3>
-					</div></li>
-				<li><a href="javascript:void(0);" target="_blank"><img src="images/2.jpg" alt="image2" /></a>
-					<div class="sb-description">
-						<h3>Honest Entertainer</h3>
-					</div></li>
-				<li><a href="javascript:void(0);" target="_blank"><img src="images/3.jpg" alt="image1" /></a>
-					<div class="sb-description">
-						<h3>Brave Astronaut</h3>
-					</div></li>
-				<li><a href="javascript:void(0);" target="_blank"><img src="images/4.jpg" alt="image1" /></a>
-					<div class="sb-description">
-						<h3>Affectionate Decision Maker</h3>
-					</div></li>
-				<li><a href="javascript:void(0);" target="_blank"><img src="images/5.jpg" alt="image1" /></a>
-					<div class="sb-description">
-						<h3>Faithful Investor</h3>
-					</div></li>
-				<li><a href="javascript:void(0);" target="_blank"><img src="images/6.jpg" alt="image1" /></a>
-					<div class="sb-description">
-						<h3>Groundbreaking Artist</h3>
-					</div></li>
-				<li><a href="javascript:void(0);" target="_blank"><img src="images/7.jpg" alt="image1" /></a>
-					<div class="sb-description">
-						<h3>Selfless Philantropist</h3>
-					</div></li>
 			</ul>
 
 			<div id="shadow" class="shadow"></div>
@@ -72,57 +45,27 @@
 	</div>
 	<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.slicebox.js"></script>
+	<script type="text/javascript" src="../js/page.js"></script>
+	<script type="text/javascript" src="../js/picIndex.js"></script>
 	<script type="text/javascript">
-			$(function() {
-				
-				var Page = (function() {
+		$(function() {
 
-					var $navArrows = $( '#nav-arrows' ).hide(),
-						$shadow = $( '#shadow' ).hide(),
-						slicebox = $( '#sb-slider' ).slicebox( {
-							onReady : function() {
+			picModule.getPicList("1");
 
-								$navArrows.show();
-								$shadow.show();
+		});
+	</script>
 
-							},
-							orientation : 'r',
-							cuboidsRandom : true
-						} ),
-						
-						init = function() {
+	<script id="picList" type="text/html">
+    	{{each list as value i}}
+{{value}}
+			<li>
+				<a href="javascript:void(0);" target="_blank"><img src="{{value.picUrl}}" alt="" /></a>
+				<div class="sb-description">
+					<h3>{{value.picContent}}</h3>
+				</div>
+			</li>
+    	{{/each}}
+	</script>
 
-							initEvents();
-							
-						},
-						initEvents = function() {
-
-							// add navigation events
-							$navArrows.children( ':first' ).on( 'click', function() {
-
-								slicebox.next();
-								return false;
-
-							} );
-
-							$navArrows.children( ':last' ).on( 'click', function() {
-								
-								slicebox.previous();
-								return false;
-
-							} );
-
-						};
-
-						return { init : init };
-
-				})();
-
-				Page.init();
-
-			});
-		</script>
-		
-		
 </body>
 </html>
