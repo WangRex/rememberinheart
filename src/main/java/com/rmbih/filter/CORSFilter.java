@@ -18,8 +18,6 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.stereotype.Component;
-
 /**
  * @ClassName: CORSFilter
  * @Description: TODO(这里用一句话描述这个类的作用)
@@ -27,7 +25,6 @@ import org.springframework.stereotype.Component;
  * @date Jun 2, 2016 11:56:18 AM
  * 
  */
-@Component
 public class CORSFilter implements Filter {
 
 	/*
