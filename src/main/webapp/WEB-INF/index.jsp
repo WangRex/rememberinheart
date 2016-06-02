@@ -27,6 +27,10 @@
 		<div class="wrapper">
 
 			<ul id="sb-slider" class="sb-slider">
+				<li><a href="javascript:void(0);" target="_blank"><img src="images/1.jpg" alt="image1" /></a>
+					<div class="sb-description">
+						<h3>Creative Lifesaver</h3>
+					</div></li>
 			</ul>
 
 			<div id="shadow" class="shadow"></div>

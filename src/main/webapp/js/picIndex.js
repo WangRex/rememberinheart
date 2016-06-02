@@ -12,7 +12,7 @@ var picModule = (function() {
 			async : false,
 			success : function(data) {
 				console.log(data);
-				$("#sb-slider").append(template('picList', {
+				$("#sb-slider").html(template('picList', {
 					list : data
 				}));
 				Page.init();
