@@ -1,21 +1,23 @@
 var Page = (function() {
 
-	var $navArrows = $('#nav-arrows').hide(), $shadow = $('#shadow').hide(), slicebox = $('#sb-slider').slicebox({
-		onReady : function() {
-
-			$navArrows.show();
-			$shadow.show();
-
-		},
-		orientation : 'r',
-		cuboidsRandom : true
-	}),
+	var $navArrows = $('#nav-arrows').hide(), $shadow = $('#shadow').hide(), 
 
 	init = function() {
 
 		initEvents();
 
 	}, initEvents = function() {
+		
+		var slicebox = $('#sb-slider').slicebox({
+			onReady : function() {
+
+				$navArrows.show();
+				$shadow.show();
+
+			},
+			orientation : 'r',
+			cuboidsRandom : true
+		})
 
 		// add navigation events
 		$navArrows.children(':first').on('click', function() {

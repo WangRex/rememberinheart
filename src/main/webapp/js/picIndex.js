@@ -15,6 +15,13 @@ var picModule = (function() {
 				$("#sb-slider").html(template('picList', {
 					list : data
 				}));
+				/*slicebox = $('#sb-slider').slicebox({
+					cuboidsCount:10,
+					cuboidsRandom:true,
+					autoplay:true,
+					interval:3000,
+					disperseFactor : 30
+				});*/
 				Page.init();
 			}
 		});

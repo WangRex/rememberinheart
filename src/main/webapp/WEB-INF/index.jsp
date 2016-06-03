@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="../css/slicebox.css" />
 <link rel="stylesheet" type="text/css" href="../css/custom.css" />
 <script type="text/javascript" src="../js/modernizr.custom.46884.js"></script>
+<script type="text/javascript" src="../js/dynamicLoading.js"></script>
 <script type="text/javascript" src="../js/template.js"></script>
 </head>
 <body>
@@ -27,10 +28,6 @@
 		<div class="wrapper">
 
 			<ul id="sb-slider" class="sb-slider">
-				<li><a href="javascript:void(0);" target="_blank"><img src="images/1.jpg" alt="image1" /></a>
-					<div class="sb-description">
-						<h3>Creative Lifesaver</h3>
-					</div></li>
 			</ul>
 
 			<div id="shadow" class="shadow"></div>
@@ -53,21 +50,20 @@
 	<script type="text/javascript" src="../js/picIndex.js"></script>
 	<script type="text/javascript">
 		$(function() {
-
 			picModule.getPicList("1");
 
 		});
 	</script>
 
 	<script id="picList" type="text/html">
-    	{{each list as value i}}
+		{{each list as value i}}
 			<li>
 				<a href="javascript:void(0);" target="_blank"><img src="{{value.picUrl}}" alt="" /></a>
 				<div class="sb-description">
 					<h3>{{value.picContent}}</h3>
 				</div>
 			</li>
-    	{{/each}}
+		{{/each}}
 	</script>
 
 </body>

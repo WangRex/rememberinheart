@@ -59,9 +59,9 @@ public class CORSFilter implements Filter {
 		HttpServletResponse httpServletResponse = (HttpServletResponse) res;
 		httpServletResponse.setHeader("Access-Control-Allow-Origin", "*");
 		httpServletResponse.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
-        httpServletResponse.setHeader("Access-Control-Max-Age", "3600");
-        httpServletResponse.setHeader("Access-Control-Allow-Headers", "x-requested-with");
-        fc.doFilter(req, res);
+		httpServletResponse.setHeader("Access-Control-Max-Age", "3600");
+		httpServletResponse.setHeader("Access-Control-Allow-Headers", "x-requested-with");
+		fc.doFilter(req, res);
 	}
 
 	/*
