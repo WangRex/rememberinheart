@@ -39,7 +39,7 @@ public class PicController {
 	public List<RmbihPicT> getPicList(int userId) {
 		RmbihPicTExample rmbihPicTExample = new RmbihPicTExample();
 		rmbihPicTExample.createCriteria().andDelsignEqualTo(0).andUserIdEqualTo(userId);
-		List<RmbihPicT> list = rmbihPicTMapper.selectByExample(rmbihPicTExample);;
+		List<RmbihPicT> list = rmbihPicTMapper.selectByExample(rmbihPicTExample);
 		return list;
 	}
 }
