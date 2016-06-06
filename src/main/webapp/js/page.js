@@ -16,7 +16,10 @@ var Page = (function() {
 
 			},
 			orientation : 'r',
-			cuboidsRandom : true
+			cuboidsRandom : true,
+			autoplay:true,
+			interval:3000,
+			disperseFactor : 30
 		})
 
 		// add navigation events
