@@ -14,6 +14,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.rmbih.dao.RmbihPicTMapper;
@@ -34,7 +35,7 @@ public class PicController {
 	@Resource
 	private RmbihPicTMapper rmbihPicTMapper;
 	
-	@RequestMapping("/getPicList")
+	@RequestMapping(value="/getPicList", method=RequestMethod.GET)
 	@ResponseBody
 	public List<RmbihPicT> getPicList(int userId) {
 		RmbihPicTExample rmbihPicTExample = new RmbihPicTExample();
