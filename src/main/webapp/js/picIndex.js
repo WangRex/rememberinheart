@@ -3,7 +3,7 @@ var picModule = (function() {
 
 	function getPicList(userId) {
 		$.ajax({
-			type : "post",
+			type : "get",
 			url : "/pic/getPicList",
 			data : {
 				userId : userId
