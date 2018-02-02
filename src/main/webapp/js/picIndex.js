@@ -4,7 +4,7 @@ var picModule = (function() {
 	function getPicList(userId) {
 		$.ajax({
 			type : "get",
-			url : "/pic/getPicList",
+			url : "/rmbih/pic/getPicList1",
 			data : {
 				userId : userId
 			},
@@ -15,14 +15,14 @@ var picModule = (function() {
 				$("#sb-slider").html(template('picList', {
 					list : data
 				}));
-				/*slicebox = $('#sb-slider').slicebox({
+				slicebox = $('#sb-slider').slicebox({
 					cuboidsCount:10,
 					cuboidsRandom:true,
-					autoplay:true,
+					autoplay:false,
 					interval:3000,
 					disperseFactor : 30
-				});*/
-				Page.init();
+				});
+//				Page.init();
 			}
 		});
 	}

@@ -9,6 +9,7 @@
 package com.rmbih.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -41,6 +42,13 @@ public class PicController {
 		RmbihPicTExample rmbihPicTExample = new RmbihPicTExample();
 		rmbihPicTExample.createCriteria().andDelsignEqualTo(0).andUserIdEqualTo(userId);
 		List<RmbihPicT> list = rmbihPicTMapper.selectByExample(rmbihPicTExample);
+		return list;
+	}
+	
+	@RequestMapping(value="/getPicList1", method=RequestMethod.GET)
+	@ResponseBody
+	public List<Map<String, Object>> getPicList1(int userId) {
+		List<Map<String, Object>> list = rmbihPicTMapper.getPicListAndUser(userId);
 		return list;
 	}
 }

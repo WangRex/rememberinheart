@@ -6,12 +6,16 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="../css/demo.css" />
-<link rel="stylesheet" type="text/css" href="../css/slicebox.css" />
-<link rel="stylesheet" type="text/css" href="../css/custom.css" />
-<script type="text/javascript" src="../js/modernizr.custom.46884.js"></script>
-<script type="text/javascript" src="../js/dynamicLoading.js"></script>
-<script type="text/javascript" src="../js/template.js"></script>
+<link rel="stylesheet" type="text/css" href="/rmbih/css/demo.css" />
+<link rel="stylesheet" type="text/css" href="/rmbih/css/slicebox.css" />
+<link rel="stylesheet" type="text/css" href="/rmbih/css/custom.css" />
+<script type="text/javascript" src="/rmbih/js/modernizr.custom.46884.js"></script>
+<script type="text/javascript" src="/rmbih/js/dynamicLoading.js"></script>
+<script type="text/javascript" src="/rmbih/js/template.js"></script>
+<script type="text/javascript" src="/rmbih/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/rmbih/js/jquery.slicebox.js"></script>
+<script type="text/javascript" src="/rmbih/js/page.js"></script>
+<script type="text/javascript" src="/rmbih/js/picIndex.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -44,10 +48,6 @@
 		</p>
 
 	</div>
-	<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.slicebox.js"></script>
-	<script type="text/javascript" src="../js/page.js"></script>
-	<script type="text/javascript" src="../js/picIndex.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			picModule.getPicList("1");

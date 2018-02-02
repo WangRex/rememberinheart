@@ -17,7 +17,7 @@ var Page = (function() {
 			},
 			orientation : 'r',
 			cuboidsRandom : true,
-			autoplay:true,
+			autoplay:false,
 			interval:3000,
 			disperseFactor : 30
 		})
