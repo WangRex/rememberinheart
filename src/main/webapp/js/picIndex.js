@@ -2,6 +2,7 @@ var picModule = (function() {
 	var my = {};
 
 	function getPicList(userId) {
+		console.log(123);
 		$.ajax({
 			type : "get",
 			url : "/rmbih/pic/getPicList1",
